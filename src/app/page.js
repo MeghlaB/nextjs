@@ -1,7 +1,18 @@
-import Image from "next/image";
+import Card from "@/Components/Card";
 
-export default function Home() {
+const Home = async () => {
+  const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+  const data = await res.json();
+
   return (
-   <></>
+   <div>
+     <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-5">
+      {data.slice(0, 8).map((post) => (
+        <Card key={post.id} title={post.title} description={post.body} />
+      ))}
+    </div>
+   </div>
   );
-}
+};
+
+export default Home;
