@@ -25,12 +25,18 @@ const  Navbar = async() =>{
             </Link></li>
             {user ? (
               <>
-                <LogoutLink>Log out</LogoutLink>
+                <LogoutLink>
+                  <Button>Log out</Button>
+                </LogoutLink>
               </>
             ) : (
               <>
-                <LoginLink>Sign in</LoginLink>
-                <RegisterLink>Sign up</RegisterLink>
+                <LoginLink>
+                  <Button>Sign in</Button>
+                </LoginLink>
+                <RegisterLink>
+                  <Button>Sign up</Button>
+                </RegisterLink>
               </>
             )}
 
