@@ -31,8 +31,8 @@ const Navbar = async () => {
               </>
             ) : (
               <>
-                <li className='btn btn-primary'><Link href='/api/auth/logout'>
-                  log Out
+                <li className='btn btn-primary'><Link href='/api/auth/register'>
+                  signIn
                 </Link></li>
                 <li className='btn btn-primary'><Link href='/api/auth/logout'>
                   log Out
