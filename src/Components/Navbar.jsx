@@ -25,7 +25,7 @@ const Navbar = async () => {
             </Link></li>
             {user ? (
               <>
-                <li className='btn btn-primary'><Link href='/api/auth/logout'>
+                <li className='py-2 px-2 border border-r-red-500'><Link href='/api/auth/logout'>
                   log Out
                 </Link></li>
               </>
