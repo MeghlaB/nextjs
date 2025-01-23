@@ -5,10 +5,10 @@ import React, { use } from 'react';
 import { Button } from './ui/button';
 
 
-const  Navbar = async() =>{
- const {getUser} = getKindeServerSession()
- const user =  await getUser()
- console.log('user data',user)
+const Navbar = async () => {
+  const { getUser } = getKindeServerSession()
+  const user = await getUser()
+  console.log('user data', user)
   return (
     <div className='bg-base-200'>
       <nav className='container mx-auto flex items-center justify-between py-4 px-3 lg:px-0'>
@@ -25,18 +25,18 @@ const  Navbar = async() =>{
             </Link></li>
             {user ? (
               <>
-                <LogoutLink>
-                  <Button>Log out</Button>
-                </LogoutLink>
+                <li className='btn btn-primary'><Link href='/api/auth/logout'>
+                  log Out
+                </Link></li>
               </>
             ) : (
               <>
-                <LoginLink>
-                  <Button>Sign in</Button>
-                </LoginLink>
-                <RegisterLink>
-                  <Button>Sign up</Button>
-                </RegisterLink>
+                <li className='btn btn-primary'><Link href='/api/auth/logout'>
+                  log Out
+                </Link></li>
+                <li className='btn btn-primary'><Link href='/api/auth/logout'>
+                  log Out
+                </Link></li>
               </>
             )}
 
